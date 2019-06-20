@@ -2,15 +2,22 @@
     text-decoration-line: none;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
+    text-align: center;
     
 }
 
 header {
+    background-color: white;
     display: flex;
     justify-content: space-between;
     padding: 20px 80px;
     font-weight: bold;
+    position: fixed;
+    left:0;
+    right: 0;
+    top: 0;
+    z-index: 1;
     
    
 }
@@ -34,26 +41,18 @@ a {
 }
 
 a:hover {
-    color: white;
+    color: rgb(224, 122, 122);
 }
 
 /*main*/
 
 #themes {
     background-image: url("../images/portrait-4246954_1920.jpg");
-    height: 600px;
-    width: 100%;
-    left: 0;
-    top: 0;
+    height: 100vh;
     font-family: sans-serif;
-    display: flex;
-    flex-direction: column;
     opacity: 0.9;
- 
-   
-    
-    
-    
+    display: flex;
+    align-items: center;
    
 }
 
@@ -61,33 +60,47 @@ h1 {
     text-transform: uppercase;
     color: white;
     font-size: 50px;
-    padding: 150px 280px 0 280px;
-    text-align: center;
+
 }
+.theme-div{
+    width: 60%;
+    margin: 0 auto;
+
+}
+.linerback{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom,#121212,#121212);
+    opacity: 0.2;
+ 
+}
+
 
 .themesp {
     color: rgb(155, 153, 153);
     text-align: center;
-    padding: 0 320px 0 320px;
     font-size: 20px;
+    margin-bottom: 3em;
+   
 }
 
 #themes a {
-    margin: auto;
     color: aliceblue;
     font-weight: bold;
     border-radius: 35px;
     padding: 20px 35px;
-    background-color: chocolate;
+    background-color: #f4623a;
     font-size: 15px;
+    display: inline-block;
 }
 
 #themes a:hover {
-    background: rgba(128, 128, 128, 0.637);
+    background: #f4623a8a;
 }
 
 hr {
-    margin: 30px 650px;
+    width: 50px;
+    margin: 30px auto;
     border: 1px solid tomato;
 }
 
@@ -95,18 +108,16 @@ hr {
 
 #started {
     width: 100%;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    background-color: chocolate;
+    height: 80vh;
+    background-color: #f4623a;
     color: white;
+    display: flex;
+    align-items: center;
     
 }
 
 .sectionthemes {
     font-size: 40px;
-    padding: 150px 280px 0 280px;
-    text-align: center;
 }
 
 .colorwhite {
@@ -122,13 +133,12 @@ hr {
 }
 
 #started a {
-    margin: auto;
     color: rgb(15, 16, 17);
     font-weight: bold;
     border-radius: 35px;
-    padding: 20px 35px;
+    padding: 20px 32px;
     background-color: rgb(240, 232, 227);
-    font-size: 16px;
+    font-size: 15px;
 }
 
 #started a:hover {
@@ -158,9 +168,9 @@ h4 {
     font-weight: 200;
 }
 
-.section3 {
+#section3 {
     width: 100%;
-    height: 550px;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,6 +186,7 @@ h4 {
 
 .icons div p {
     color: grey;
+    font-size: 18px;
 }
 
 h4 {
@@ -186,20 +197,24 @@ h4 {
 /* section images */
 
 #galery {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
+   
     box-shadow: 0px 0px 20px grey;
+    
 }
 
 .images {
     width: 100%;
     height: 100%;
 }
+.imagecontainer{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
 
-#galery div {
-    flex: 33%;
-    max-width: 33%;
+.imagecontainer div {
+   max-width: 33.33333%;
+   
 }
 
 #galery a:hover {
@@ -208,3 +223,64 @@ h4 {
 }
 
 /* section4 */
+
+#download{
+    height: 70vh;
+    background-color: #343a40;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+}
+#download a{
+    color: black;
+    font-weight: bold;
+    border-radius: 35px;
+    padding: 20px 35px;
+    background-color: white;
+    font-size: 15px;
+    display: inline-block;
+    transition: 0.3s all;
+}
+#download h2{
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+#download a:hover{
+    background-color: white;
+    opacity: 0.6;
+    transition: 0.3s all;
+}
+/* section contact */
+#contact{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    font-family: sans-serif;
+}
+#contact h2{
+    font-size: 30px;
+}
+#contact p{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+    color:grey;
+    margin-bottom: 30px;
+}
+#contact i{
+    color:grey;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+#contact .icons{
+    justify-content: space-around;
+}
+footer{
+    background-color: rgb(238, 227, 227);
+    height: 20vh;
+    font-family: sans-serif;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
